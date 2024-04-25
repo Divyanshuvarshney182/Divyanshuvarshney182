@@ -4,7 +4,6 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 You can reach me at divyanshuvarshney182@gmail.com
 - 😄 Pronouns: He/Him
-- ⚡ Fun fact: ...
 
 <!---
 Divyanshuvarshney182/Divyanshuvarshney182 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
