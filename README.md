@@ -1,7 +1,6 @@
 - 👋 Hi, I’m Divyanshu Varshney
-- 👀 I’m interested in F1, Gold, Code, Moto GP, Functionalities, life.
-- 🌱 I’m currently learning CSE
-- 💞️ I’m looking to collaborate on ...
+- 👀 I’m interested in F1, Gold, Code, Moto GP, Functionalities, life, Exports.
+- 🌱 I’m currently learning how to survive.
 - 📫 You can reach me at divyanshuvarshney182@gmail.com
 - 😄 Pronouns: He/Him
 
