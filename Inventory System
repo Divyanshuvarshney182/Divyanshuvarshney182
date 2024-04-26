@@ -1,47 +1,52 @@
 class Inventory:
-    def _init_(self):
+    def __init__(self):
         self.inventory = {}
-    def add_item(self, item, quantity):
-        if item in self.inventory:
-            self.inventory[item] += quantity
+    def add_item(self, item_name, quantity):
+        if item_name in self.inventory:
+            self.inventory[item_name] += quantity
         else:
-            self.inventory[item] = quantity
-        print(f"{quantity} {item}(s) added to inventory.")
-    def remove_item(self, item, quantity):
-        if item in self.inventory:
-            if self.inventory[item] >= quantity:
-                self.inventory[item] -= quantity
-                print(f"{quantity} {item}(s) removed from inventory.")
+            self.inventory[item_name] = quantity
+        print(f"{quantity} {item_name}(s) added to inventory.")
+    def remove_item(self, item_name, quantity):
+        if item_name in self.inventory:
+            if self.inventory[item_name] >= quantity:
+                self.inventory[item_name] -= quantity
+                print(f"{quantity} {item_name}(s) removed from inventory.")
             else:
-                print(f"Not enough {item} in inventory.")
+                print("Insufficient quantity in inventory.")
         else:
-            print(f"{item} not found in inventory.")
+            print("Item not found in inventory.")
+    def check_quantity(self, item_name):
+        if item_name in self.inventory:
+            print(f"Quantity of {item_name} in inventory: {self.inventory[item_name]}")
+        else:
+            print("Item not found in inventory.")
     def display_inventory(self):
-        print("Current Inventory:")
-        for item, quantity in self.inventory.items():
-            print(f"{item}: {quantity}")
+        print("Inventory:")
+        for item_name, quantity in self.inventory.items():
+            print(f"{item_name}: {quantity}")
 def main():
-    inventory = Inventory()
+    inventory_system = Inventory()
     while True:
-        print("1. Add item")
-        print("2. Remove item")
-        print("3. Display net inventory")
-        print("4. Exit")
+        print("\n1. Add Item\n2. Remove Item\n3. Check Quantity\n4. Display Inventory\n5. Exit")
         choice = input("Enter your choice: ")
         if choice == "1":
-            item = input("Enter item name: ")
+            item_name = input("Enter item name: ")
             quantity = int(input("Enter quantity to add: "))
-            inventory.add_item(item, quantity)
+            inventory_system.add_item(item_name, quantity)
         elif choice == "2":
-            item = input("Enter item name: ")
+            item_name = input("Enter item name: ")
             quantity = int(input("Enter quantity to remove: "))
-            inventory.remove_item(item, quantity)
+            inventory_system.remove_item(item_name, quantity)
         elif choice == "3":
-            inventory.display_inventory()
+            item_name = input("Enter item name: ")
+            inventory_system.check_quantity(item_name)
         elif choice == "4":
+            inventory_system.display_inventory()
+        elif choice == "5":
             print("Exiting...")
             break
         else:
-            print("Invalid choice. Please enter 1, 2, 3, or 4.")
+            print("Invalid choice. Please try again.")
 if __name__ == "__main__":
     main()
